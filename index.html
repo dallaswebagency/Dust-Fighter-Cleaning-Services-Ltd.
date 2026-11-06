@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dust Fighter Cleaning Services | Calgary Home &amp; Commercial Cleaning</title>
+<meta name="description" content="Dust Fighter Cleaning Services provides eco-friendly residential and commercial cleaning in Calgary, Alberta. Office, floor, window, carpet, upholstery, furnace and dryer vent cleaning.">
+<link rel="icon" href="images/dust-fighter-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,400..900&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cyan:#00ACDE;
+  --cyan-deep:#0088B3;
+  --cyan-wash:#E3F5FB;
+  --ink:#0A0D10;
+  --ink-2:#14191E;
+  --paper:#F5F8F9;
+  --line:#DCE4E8;
+  --muted:#5B6870;
+  --display:"Archivo",system-ui,sans-serif;
+  --body:"Instrument Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);color:var(--ink);background:var(--paper);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1240px,92vw);margin:0 auto}
+.disp{font-family:var(--display);font-stretch:125%;font-weight:850;letter-spacing:-.01em;line-height:.98;text-transform:uppercase}
+.kicker{font-family:var(--display);font-stretch:110%;font-weight:700;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--cyan-deep);display:flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:28px;height:3px;background:var(--cyan)}
+.btn{display:inline-flex;align-items:center;gap:10px;font-family:var(--display);font-stretch:110%;font-weight:750;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:16px 26px;border:2px solid var(--cyan);background:var(--cyan);color:#fff;transition:.25s}
+.btn:hover{background:var(--ink);border-color:var(--ink)}
+.btn.ghost{background:transparent;color:inherit;border-color:currentColor}
+.btn.ghost:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn svg{width:18px;height:18px}
+
+/* ---------- top bar + header ---------- */
+.topbar{background:var(--ink);color:#B9C6CD;font-size:14px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:9px 0;flex-wrap:wrap}
+.topbar a:hover{color:var(--cyan)}
+.topbar .tb-l{display:flex;gap:26px;flex-wrap:wrap}
+.topbar .tb-l span{display:flex;gap:8px;align-items:center}
+.topbar svg{width:15px;height:15px;color:var(--cyan)}
+header.site{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:50}
+header.site .wrap{display:flex;align-items:center;justify-content:space-between;height:84px;gap:24px}
+.logo img{height:52px;width:auto}
+nav.main ul{display:flex;gap:6px;list-style:none}
+nav.main a{font-weight:600;font-size:15.5px;padding:10px 16px;position:relative}
+nav.main a::after{content:"";position:absolute;left:16px;right:16px;bottom:4px;height:2px;background:var(--cyan);transform:scaleX(0);transform-origin:left;transition:.25s}
+nav.main a:hover::after,nav.main a.on::after{transform:scaleX(1)}
+.hdr-cta{display:flex;align-items:center;gap:22px}
+.hdr-phone{display:flex;flex-direction:column;line-height:1.15;text-align:right}
+.hdr-phone small{font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.hdr-phone b{font-family:var(--display);font-stretch:110%;font-size:18px}
+.burger{display:none;background:none;border:0;width:44px;height:44px;cursor:pointer}
+.burger span{display:block;width:26px;height:2px;background:var(--ink);margin:6px auto}
+
+/* ---------- hero ---------- */
+.hero{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.06) 1px,transparent 1px);background-size:22px 22px}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.15fr .85fr;align-items:end;min-height:640px}
+.hero-copy{padding:90px 0 150px}
+.hero-copy .kicker{color:var(--cyan)}
+.hero h1{font-size:clamp(52px,7.6vw,116px);margin:22px 0 26px}
+.hero h1 em{font-style:normal;color:var(--cyan);display:block}
+.hero h1 .stroke{color:transparent;-webkit-text-stroke:2px #fff}
+.hero p.lead{max-width:470px;color:#C5D1D7;font-size:19px}
+.hero-btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.hero-visual{position:relative;height:100%;display:flex;align-items:flex-end;justify-content:center}
+.hero-visual .slab{position:absolute;bottom:0;right:-4%;width:92%;height:80%;background:var(--cyan);clip-path:polygon(18% 0,100% 0,100% 100%,0 100%)}
+.hero-visual .slab::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-62deg,transparent 0 26px,rgba(255,255,255,.12) 26px 30px)}
+.hero-visual img{position:relative;z-index:2;max-height:600px;width:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.35))}
+.spark{position:absolute;z-index:3;color:#fff}
+.spark svg{width:100%;height:100%}
+.spark.s1{width:46px;height:46px;top:22%;left:4%;animation:tw 3s infinite}
+.spark.s2{width:28px;height:28px;top:12%;right:8%;animation:tw 3s 1s infinite}
+.spark.s3{width:22px;height:22px;bottom:30%;right:2%;color:var(--ink);animation:tw 3s 2s infinite}
+@keyframes tw{0%,100%{transform:scale(1) rotate(0)}50%{transform:scale(.6) rotate(45deg)}}
+
+/* quote ticket */
+.ticket-wrap{position:relative;z-index:5;margin-top:-86px}
+.ticket{background:#fff;display:grid;grid-template-columns:260px 1fr;box-shadow:0 30px 60px -20px rgba(10,13,16,.25)}
+.ticket-head{background:var(--cyan-wash);padding:30px 32px;position:relative;border-right:2px dashed #9FD8EA}
+.ticket-head::before,.ticket-head::after{content:"";position:absolute;right:-13px;width:24px;height:24px;border-radius:50%;background:var(--paper)}
+.ticket-head::before{top:-12px}.ticket-head::after{bottom:-12px}
+.ticket-head h2{font-size:26px}
+.ticket-head p{font-size:14.5px;color:var(--muted);margin-top:8px}
+.ticket form{display:grid;grid-template-columns:1.2fr 1fr 1fr auto;gap:14px;padding:28px 30px;align-items:end}
+.field label{display:block;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.field input,.field select{width:100%;font:inherit;font-size:16px;padding:13px 14px;border:1.5px solid var(--line);background:var(--paper);color:var(--ink);border-radius:0;appearance:none}
+.field select{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2300ACDE' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
+.field input:focus,.field select:focus{outline:none;border-color:var(--cyan);background:#fff}
+.ticket .btn{height:52px}
+
+/* ---------- about ---------- */
+.about{padding:130px 0 120px}
+.about .wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.about-photo{position:relative}
+.about-photo .frame{clip-path:polygon(0 0,100% 0,86% 100%,0 100%);overflow:hidden}
+.about-photo img{width:100%;height:520px;object-fit:cover}
+.about-photo .tag{position:absolute;right:-10px;bottom:46px;background:var(--ink);color:#fff;padding:20px 24px;max-width:230px}
+.about-photo .tag b{font-family:var(--display);font-stretch:125%;font-size:22px;text-transform:uppercase;display:block;color:var(--cyan);line-height:1}
+.about-photo .tag span{font-size:14px;color:#C5D1D7}
+.about h2{font-size:clamp(38px,4.4vw,62px);margin:20px 0 24px}
+.about h2 span{color:var(--cyan)}
+.about p{color:var(--muted);max-width:560px}
+.pillars{margin-top:38px;border-top:1px solid var(--line)}
+.pillar{display:grid;grid-template-columns:56px 1fr;gap:18px;padding:20px 0;border-bottom:1px solid var(--line);align-items:center}
+.pillar .ic{width:56px;height:56px;background:var(--cyan-wash);display:grid;place-items:center;color:var(--cyan-deep)}
+.pillar .ic svg{width:26px;height:26px}
+.pillar h3{font-family:var(--display);font-stretch:112%;font-size:19px;font-weight:750}
+.pillar p{font-size:15px;margin:0}
+.about .btn{margin-top:34px}
+
+/* ---------- services index ---------- */
+.services{background:#fff;padding:120px 0;border-top:1px solid var(--line)}
+.services .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px}
+.svc-side{position:sticky;top:120px;align-self:start}
+.svc-side h2{font-size:clamp(40px,4.6vw,66px);margin:20px 0 20px}
+.svc-side p{color:var(--muted);max-width:440px}
+.svc-preview{margin-top:34px;aspect-ratio:4/3;position:relative;background:var(--cyan-wash) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 24 24'%3E%3Cpath fill='%2300ACDE' fill-opacity='.35' d='M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z'/%3E%3C/svg%3E") center/80px no-repeat;overflow:hidden}
+.svc-preview img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity .4s, transform .6s;transform:scale(1.05)}
+.svc-preview img.show{opacity:1;transform:scale(1)}
+.svc-preview .cap{position:absolute;left:0;bottom:0;background:var(--ink);color:#fff;font-family:var(--display);font-stretch:115%;font-weight:750;text-transform:uppercase;font-size:14px;letter-spacing:.08em;padding:12px 18px;z-index:2}
+.svc-list{list-style:none;border-top:2px solid var(--ink)}
+.svc-list li{border-bottom:1px solid var(--line)}
+.svc-list a{display:grid;grid-template-columns:54px 1fr 40px;align-items:center;padding:24px 4px;gap:10px;transition:.25s}
+.svc-list .n{font-family:var(--display);font-stretch:110%;font-weight:600;font-size:14px;color:var(--muted)}
+.svc-list .t{font-family:var(--display);font-stretch:118%;font-weight:800;font-size:clamp(20px,2vw,27px);text-transform:uppercase;line-height:1.1}
+.svc-list .t small{display:block;font-family:var(--body);font-stretch:100%;text-transform:none;font-weight:500;font-size:15px;color:var(--muted);margin-top:4px;letter-spacing:0}
+.svc-list .ar{width:40px;height:40px;border:1.5px solid var(--line);display:grid;place-items:center;transition:.25s}
+.svc-list .ar svg{width:16px;height:16px}
+.svc-list li.active a,.svc-list a:hover{padding-left:16px;background:var(--paper)}
+.svc-list li.active .ar,.svc-list a:hover .ar{background:var(--cyan);border-color:var(--cyan);color:#fff}
+.svc-list li.active .n{color:var(--cyan)}
+.svc-also{margin-top:24px;font-size:15px;color:var(--muted)}
+.svc-also b{color:var(--ink)}
+
+/* ---------- real work ---------- */
+.proof{background:var(--ink);color:#fff;padding:120px 0;position:relative;overflow:hidden}
+.proof .head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.proof .kicker{color:var(--cyan)}
+.proof h2{font-size:clamp(40px,5vw,72px);margin-top:18px}
+.proof h2 span{color:transparent;-webkit-text-stroke:2px var(--cyan)}
+.proof .head p{max-width:380px;color:#AEBBC2}
+.proof-grid{display:grid;grid-template-columns:1.5fr 1fr;gap:22px;height:720px}
+.ba{position:relative;height:100%;overflow:hidden;user-select:none;cursor:ew-resize;background:#222}
+.ba img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;pointer-events:none}
+.ba .after{clip-path:inset(0 0 0 50%)}
+.ba .handle{position:absolute;top:0;bottom:0;left:50%;width:3px;background:var(--cyan);transform:translateX(-50%)}
+.ba .handle::after{content:"";position:absolute;top:50%;left:50%;width:56px;height:56px;transform:translate(-50%,-50%);background:var(--cyan) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26' height='26' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2.5'%3E%3Cpath d='M9 6l-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E") center no-repeat}
+.ba .lab{position:absolute;top:18px;font-family:var(--display);font-stretch:115%;font-weight:800;font-size:13px;letter-spacing:.14em;text-transform:uppercase;padding:8px 14px;z-index:2}
+.ba .lab.b{left:18px;background:#fff;color:var(--ink)}
+.ba .lab.a{right:18px;background:var(--cyan);color:#fff}
+.proof-side{display:grid;grid-template-rows:1fr 1fr;gap:22px;min-height:0}
+.proof-side figure{min-height:0}
+.proof-side figure{position:relative;overflow:hidden}
+.proof-side img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.proof-side figure:hover img{transform:scale(1.05)}
+.proof-side figcaption{position:absolute;left:0;bottom:0;background:rgba(10,13,16,.85);padding:10px 16px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
+
+/* ---------- pricing ---------- */
+.pricing{padding:120px 0;background:var(--cyan);position:relative;overflow:hidden}
+.pricing::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-62deg,transparent 0 60px,rgba(255,255,255,.08) 60px 64px)}
+.pricing .wrap{position:relative;display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:center}
+.pricing .kicker{color:var(--ink)}
+.pricing .kicker::before{background:var(--ink)}
+.pricing h2{font-size:clamp(40px,4.8vw,68px);color:#fff;margin:18px 0 20px}
+.pricing h2 span{color:var(--ink)}
+.pricing .intro p{color:#E8F7FC;max-width:400px}
+.tags{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.ptag{background:#fff;padding:44px 34px 34px;position:relative;clip-path:polygon(0 0,calc(100% - 34px) 0,100% 34px,100% 100%,0 100%)}
+.ptag::before{content:"";position:absolute;top:22px;left:28px;width:16px;height:16px;border-radius:50%;background:var(--cyan);box-shadow:inset 0 0 0 4px #fff,0 0 0 2px var(--ink)}
+.ptag .pn{font-family:var(--display);font-stretch:118%;font-weight:800;text-transform:uppercase;font-size:20px;margin-top:20px}
+.ptag .pf{font-size:15px;color:var(--muted)}
+.ptag .pr{font-family:var(--display);font-stretch:125%;font-weight:900;font-size:76px;line-height:1;margin:22px 0 26px;display:flex;align-items:flex-start;gap:4px}
+.ptag .pr sup{font-size:30px;margin-top:8px;color:var(--cyan)}
+.ptag .btn{width:100%;justify-content:center}
+.ptag.dark{background:var(--ink);color:#fff}
+.ptag.dark::before{box-shadow:inset 0 0 0 4px var(--ink),0 0 0 2px #fff}
+.ptag.dark .pf{color:#AEBBC2}
+.ptag.dark .btn:hover{background:#fff;color:var(--ink);border-color:#fff}
+.price-note{grid-column:2;font-size:15px;color:var(--ink);font-weight:500}
+.price-note a{text-decoration:underline;text-underline-offset:3px}
+
+/* ---------- reviews ---------- */
+.reviews{padding:120px 0;background:var(--paper)}
+.reviews .top{display:grid;grid-template-columns:1fr auto;align-items:end;gap:30px;margin-bottom:54px}
+.reviews h2{font-size:clamp(40px,4.6vw,66px);margin-top:18px}
+.stars{display:flex;gap:4px;color:var(--cyan)}
+.stars svg{width:20px;height:20px}
+.rv-grid{display:grid;grid-template-columns:repeat(3,1fr);border:1.5px solid var(--ink)}
+.rv{padding:40px 34px;background:#fff;display:flex;flex-direction:column;gap:22px}
+.rv+.rv{border-left:1.5px solid var(--ink)}
+.rv:nth-child(2){background:var(--ink);color:#fff}
+.rv:nth-child(2) .rv-txt{color:#D2DCE1}
+.rv .job{font-family:var(--display);font-stretch:115%;font-weight:800;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--cyan-deep)}
+.rv:nth-child(2) .job{color:var(--cyan)}
+.rv-txt{font-size:19px;line-height:1.5;color:#2A333A;flex:1}
+.rv-who{display:flex;align-items:center;gap:14px;padding-top:20px;border-top:1px solid var(--line)}
+.rv:nth-child(2) .rv-who{border-color:#2A333A}
+.rv-who .in{width:48px;height:48px;background:var(--cyan);color:#fff;display:grid;place-items:center;font-family:var(--display);font-stretch:120%;font-weight:800}
+.rv-who b{display:block;font-size:16px}
+.rv-who small{font-size:13px;color:var(--muted)}
+
+/* ---------- consult ---------- */
+.consult{background:var(--ink);color:#fff;position:relative;overflow:hidden}
+.consult .wrap{display:grid;grid-template-columns:1.1fr .9fr;min-height:460px}
+.consult-l{padding:100px 60px 100px 0;position:relative;z-index:2}
+.consult .kicker{color:var(--cyan)}
+.consult h2{font-size:clamp(44px,5.4vw,84px);margin:20px 0 24px}
+.consult h2 span{color:var(--cyan)}
+.consult p{color:#AEBBC2;max-width:480px}
+.consult-btns{display:flex;gap:14px;margin-top:34px;flex-wrap:wrap}
+.consult-r{position:relative;background:var(--ink-2)}
+.consult-r::before{content:"";position:absolute;left:-60px;top:0;bottom:0;width:120px;background:var(--ink);transform:skewX(-12deg);z-index:1}
+.consult-r ul{list-style:none;position:relative;z-index:2;padding:100px 0 100px 80px;display:flex;flex-direction:column;gap:30px;height:100%;justify-content:center}
+.consult-r li{display:grid;grid-template-columns:52px 1fr;gap:18px;align-items:center}
+.consult-r .ic{width:52px;height:52px;border:1.5px solid var(--cyan);display:grid;place-items:center;color:var(--cyan)}
+.consult-r .ic svg{width:22px;height:22px}
+.consult-r small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#7F8D95}
+.consult-r b{font-size:18px;font-weight:600}
+.consult-r a:hover{color:var(--cyan)}
+
+/* ---------- footer ---------- */
+footer{background:#fff;padding:80px 0 0;border-top:4px solid var(--cyan)}
+.ft-grid{display:grid;grid-template-columns:1.3fr .8fr 1fr 1fr;gap:50px;padding-bottom:60px}
+.ft-grid img{height:50px;width:auto;margin-bottom:20px}
+.ft-grid p{color:var(--muted);font-size:15px;max-width:320px}
+.ft-grid h4{font-family:var(--display);font-stretch:118%;font-weight:800;text-transform:uppercase;font-size:15px;letter-spacing:.08em;margin-bottom:18px}
+.ft-grid ul{list-style:none;display:flex;flex-direction:column;gap:9px;font-size:15px;color:var(--muted)}
+.ft-grid a:hover{color:var(--cyan-deep)}
+.social{display:flex;gap:10px;margin-top:22px}
+.social a{width:42px;height:42px;border:1.5px solid var(--line);display:grid;place-items:center;transition:.25s}
+.social a:hover{background:var(--cyan);border-color:var(--cyan);color:#fff}
+.social svg{width:18px;height:18px}
+.ft-bottom{border-top:1px solid var(--line);padding:22px 0;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:14px;color:var(--muted)}
+.ft-bottom a{color:var(--ink);font-weight:600}
+.ft-bottom a:hover{color:var(--cyan-deep)}
+
+/* reveal */
+.rv-in{opacity:0;transform:translateY(28px);transition:opacity .8s ease, transform .8s ease}
+.rv-in.vis{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1080px){
+  .ticket{grid-template-columns:1fr}
+  .ticket-head{border-right:0;border-bottom:2px dashed #9FD8EA}
+  .ticket-head::before,.ticket-head::after{display:none}
+  .ticket form{grid-template-columns:1fr 1fr}
+  .hdr-phone{display:none}
+}
+@media (max-width:920px){
+  nav.main{position:fixed;top:84px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);display:none}
+  nav.main.open{display:block}
+  nav.main ul{flex-direction:column;padding:12px 4vw}
+  .burger{display:block}
+  .hdr-cta .btn{display:none}
+  .topbar .tb-l span.addr{display:none}
+  .hero .wrap{grid-template-columns:1fr;min-height:0}
+  .hero-copy{padding:70px 0 30px}
+  .hero-visual{height:440px}
+  .hero-visual img{max-height:440px}
+  .ticket-wrap{margin-top:-40px}
+  .about .wrap,.services .wrap,.pricing .wrap,.consult .wrap{grid-template-columns:1fr;gap:50px}
+  .svc-side{position:static}
+  .about-photo img{height:380px}
+  .proof-grid{grid-template-columns:1fr;height:auto}
+  .ba{height:auto;aspect-ratio:7/8}
+  .proof-side{grid-template-rows:none;grid-template-columns:1fr 1fr}
+  .proof-side figure{aspect-ratio:7/9}
+  .price-note{grid-column:1}
+  .rv-grid{grid-template-columns:1fr}
+  .rv+.rv{border-left:0;border-top:1.5px solid var(--ink)}
+  .reviews .top{grid-template-columns:1fr}
+  .consult-l{padding:80px 0 30px}
+  .consult-r{background:transparent}
+  .consult-r::before{display:none}
+  .consult-r ul{padding:0 0 80px}
+  .ft-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  body{font-size:16px}
+  .logo img{height:42px}
+  .ticket form{grid-template-columns:1fr;padding:24px}
+  .tags{grid-template-columns:1fr}
+  .about,.services,.proof,.pricing,.reviews{padding:90px 0}
+  .ft-grid{grid-template-columns:1fr}
+  .topbar .tb-l span.mail{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="tb-l">
+      <span class="addr"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>32 Martindale Close NE, Calgary, AB</span>
+      <span class="mail"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg><a href="mailto:info@dustfighters.ca">info@dustfighters.ca</a></span>
+    </div>
+    <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align:-2px;margin-right:6px"><path d="M12 2l2.6 7.4L22 12l-7.4 2.6L12 22l-2.6-7.4L2 12l7.4-2.6z"/></svg>Eco-friendly cleaning across Calgary</span>
+  </div>
+</div>
+
+<header class="site">
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Dust Fighter Cleaning Services home"><img src="images/dust-fighter-logo.png" alt="Dust Fighter Cleaning Services"></a>
+    <nav class="main" id="nav">
+      <ul>
+        <li><a href="#" class="on">Home</a></li>
+        <li><a href="https://dustfighters.ca/about-us/">About Us</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="https://dustfighters.ca/contact-us/">Contact Us</a></li>
+      </ul>
+    </nav>
+    <div class="hdr-cta">
+      <a href="tel:+14034791168" class="hdr-phone"><small>Call us</small><b>(403) 479-1168</b></a>
+      <a href="#quote" class="btn">Book a Clean</a>
+      <button class="burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy">
+      <div class="kicker">Cleaning for a healthier home</div>
+      <h1 class="disp">We keep <span class="stroke">all</span> <em>clean.</em></h1>
+      <p class="lead">Homes and businesses across Calgary trust Dust Fighter for thorough, eco-friendly cleaning. Book your cleaning session and let us take on the dust.</p>
+      <div class="hero-btns">
+        <a href="#quote" class="btn">Book a cleaning session <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#services" class="btn ghost">Explore services</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="slab"></div>
+      <span class="spark s1"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
+      <span class="spark s2"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
+      <span class="spark s3"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 0l2.6 9.4L24 12l-9.4 2.6L12 24l-2.6-9.4L0 12l9.4-2.6z"/></svg></span>
+      <img src="images/hero-cleaner.png" alt="Dust Fighter cleaner holding a spray bottle">
+    </div>
+  </div>
+</section>
+
+<div class="ticket-wrap" id="quote">
+  <div class="wrap">
+    <div class="ticket">
+      <div class="ticket-head">
+        <h2 class="disp">Get a free quote</h2>
+        <p>Tell us what needs cleaning and we will get back to you.</p>
+      </div>
+      <form id="quoteForm">
+        <div class="field">
+          <label for="q-svc">Service</label>
+          <select id="q-svc" required>
+            <option value="">Choose a service</option>
+            <option>Residential Cleaning</option>
+            <option>Office &amp; Commercial Cleaning</option>
+            <option>Floor Maintenance</option>
+            <option>Garbage Bin Cleaning</option>
+            <option>Window Cleaning</option>
+            <option>Upholstery Cleaning</option>
+            <option>Carpet Cleaning</option>
+            <option>Furnace Cleaning</option>
+            <option>Dryer Vent Cleaning</option>
+            <option>Restroom Cleaning</option>
+            <option>Litter Pick-Up</option>
+          </select>
+        </div>
+        <div class="field"><label for="q-name">Your name</label><input id="q-name" type="text" placeholder="Full name" required></div>
+        <div class="field"><label for="q-phone">Phone</label><input id="q-phone" type="tel" placeholder="(403) 000-0000" required></div>
+        <button class="btn" type="submit">Send request</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<section class="about">
+  <div class="wrap">
+    <div class="about-photo rv-in">
+      <div class="frame"><img src="images/office-commercial.jpg" alt="Dust Fighter team cleaning an office floor"></div>
+      <div class="tag"><b>Calgary, AB</b><span>Homes and businesses across the city</span></div>
+    </div>
+    <div class="rv-in">
+      <div class="kicker">What we are</div>
+      <h2 class="disp">Clean spaces. <span>Healthier</span> living.</h2>
+      <p>Dust Fighter Cleaning Services delivers high-quality cleaning for homes and businesses in Calgary. Every job is built on eco-friendly methods, safe practices and one simple goal: a customer who is happy with the result.</p>
+      <div class="pillars">
+        <div class="pillar"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 19c0-8 6-14 15-14 0 9-6 15-14 15"/><path d="M5 19l7-7"/></svg></div><div><h3>Eco-friendly methods</h3><p>Cleaning that is kinder to your space and the people in it.</p></div></div>
+        <div class="pillar"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg></div><div><h3>Safety first</h3><p>Careful, responsible work in every home and workplace.</p></div></div>
+        <div class="pillar"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-8-4.8-8-11a4.5 4.5 0 018-2.8A4.5 4.5 0 0120 10c0 6.2-8 11-8 11z"/></svg></div><div><h3>Customer satisfaction</h3><p>We are not done until you are happy with the clean.</p></div></div>
+      </div>
+      <a href="https://dustfighters.ca/about-us/" class="btn ghost" style="color:var(--ink)">More about us</a>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-side">
+      <div class="kicker">Our services</div>
+      <h2 class="disp">Routine or deep clean, we cover it.</h2>
+      <p>From weekly upkeep to a top-to-bottom deep clean, pick the service you need. Hover a service to see it in action.</p>
+      <div class="svc-preview" id="svcPreview">
+        <img src="images/residential.jpg" alt="" class="show" data-k="0">
+        <span class="cap" id="svcCap">Residential Cleaning</span>
+      </div>
+    </div>
+    <div>
+      <ul class="svc-list" id="svcList">
+        <li class="active" data-img="images/residential.jpg"><a href="#quote"><span class="n">01</span><span class="t">Residential Cleaning<small>Regular and deep cleaning for busy households</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a></li>
+        <li data-img="images/office-commercial.jpg"><a href="#quote"><span class="n">02</span><span class="t">Office &amp; Commercial Cleaning<small>Clean, healthy workplaces for your team</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a></li>
+        <li data-img="images/floor-maintenance.jpg"><a href="#quote"><span class="n">03</span><span class="t">Floor Maintenance<small>Floors that stay clean, polished and safe</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a></li>
+        <li data-img="images/garbage-bin.jpg"><a href="#quote"><span class="n">04</span><span class="t">Garbage Bin Cleaning<small>Fresh, sanitized bins without the smell</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a></li>
+        <li data-img="images/window-cleaning.jpg"><a href="#quote"><span class="n">05</span><span class="t">Window Cleaning<small>Streak-free glass, inside and out</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a></li>
+        <li data-img="images/upholstery.jpg"><a href="#quote"><span class="n">06</span><span class="t">Upholstery Cleaning<small>Sofas and chairs refreshed and revived</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a></li>
+        <li data-img="images/carpet-cleaning.jpg"><a href="#quote"><span class="n">07</span><span class="t">Carpet Cleaning<small>Lift deep dirt and dust from your carpets</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a></li>
+        <li data-img="images/furnace-cleaning.jpg"><a href="#quote"><span class="n">08</span><span class="t">Furnace Cleaning<small>Cleaner air starts with a clean furnace</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a></li>
+        <li data-img="images/dryer-vent-cleaning.jpg"><a href="#quote"><span class="n">09</span><span class="t">Dryer Vent Cleaning<small>Clear lint build-up from your dryer vents</small></span><span class="ar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M8 7h9v9"/></svg></span></a></li>
+      </ul>
+      <p class="svc-also">Also available: <b>Restroom Cleaning</b> and <b>Litter Pick-Up</b>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+    <div class="head rv-in">
+      <div>
+        <div class="kicker">Real jobs, real results</div>
+        <h2 class="disp">See the <span>difference.</span></h2>
+      </div>
+      <p>Photos from our own projects. Drag the slider to compare a space before and after the Dust Fighter team.</p>
+    </div>
+    <div class="proof-grid">
+      <div class="ba rv-in" id="ba">
+        <img src="images/job-before.jpg" alt="Room before cleaning, litter on the floor">
+        <img src="images/job-after.jpg" alt="Same room after cleaning" class="after" id="baAfter">
+        <span class="lab b">Before</span><span class="lab a">After</span>
+        <div class="handle" id="baHandle"></div>
+      </div>
+      <div class="proof-side">
+        <figure class="rv-in"><img src="images/job-hallway.jpg" alt="Cleaned hallway from a Dust Fighter project"><figcaption>Project photo</figcaption></figure>
+        <figure class="rv-in"><img src="images/job-washroom.jpg" alt="Cleaned washroom from a Dust Fighter project"><figcaption>Project photo</figcaption></figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing">
+  <div class="wrap">
+    <div class="intro rv-in">
+      <div class="kicker">Packages</div>
+      <h2 class="disp">Simple <span>pricing.</span></h2>
+      <p>Two packages to get you started. Need something different? Ask us for a custom quote.</p>
+    </div>
+    <div class="tags">
+      <div class="ptag rv-in">
+        <div class="pn">Basic</div>
+        <div class="pf">Great for small teams</div>
+        <div class="pr"><sup>$</sup>159</div>
+        <a href="#quote" class="btn">Book Basic</a>
+      </div>
+      <div class="ptag dark rv-in">
+        <div class="pn">Premium</div>
+        <div class="pf">Great for professional users</div>
+        <div class="pr"><sup>$</sup>259</div>
+        <a href="#quote" class="btn">Book Premium</a>
+      </div>
+      <p class="price-note">Not sure which fits? <a href="tel:+14034791168">Call (403) 479-1168</a> and we will help you choose.</p>
+    </div>
+  </div>
+</section>
+
+<section class="reviews">
+  <div class="wrap">
+    <div class="top rv-in">
+      <div>
+        <div class="kicker">Client reviews</div>
+        <h2 class="disp">Calgary says it best.</h2>
+      </div>
+      <div class="stars" aria-label="5 star reviews">
+        <svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 2l3 6.9 7.5.7-5.7 5 1.7 7.4L12 18l-6.5 4 1.7-7.4-5.7-5 7.5-.7z"/></svg>
+      </div>
+    </div>
+    <div class="rv-grid">
+      <div class="rv rv-in">
+        <div class="job">Post-construction clean</div>
+        <p class="rv-txt">Booked Dust Fighter for a new apartment after construction. The team was punctual and efficient, and the results were excellent.</p>
+        <div class="rv-who"><span class="in">PS</span><div><b>Priya S.</b><small>5-star review</small></div></div>
+      </div>
+      <div class="rv rv-in">
+        <div class="job">Post-renovation dust</div>
+        <p class="rv-txt">Renovation dust was everywhere in the apartment. The crew was courteous and thorough, and removed every bit of it.</p>
+        <div class="rv-who"><span class="in">RK</span><div><b>Ravi K.</b><small>5-star review</small></div></div>
+      </div>
+      <div class="rv rv-in">
+        <div class="job">Regular home cleaning</div>
+        <p class="rv-txt">A busy home with two young kids needs regular help. Dust Fighter delivers consistently excellent work every visit.</p>
+        <div class="rv-who"><span class="in">SM</span><div><b>Sangeeta M.</b><small>5-star review</small></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="consult">
+  <div class="wrap">
+    <div class="consult-l rv-in">
+      <div class="kicker">Get free consultation</div>
+      <h2 class="disp">Ready to fight the <span>dust?</span></h2>
+      <p>Call, email or send a quote request. We will plan the right clean for your home or business.</p>
+      <div class="consult-btns">
+        <a href="#quote" class="btn">Request a quote</a>
+        <a href="https://dustfighters.ca/contact-us/" class="btn ghost">Contact us</a>
+      </div>
+    </div>
+    <div class="consult-r">
+      <ul>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 005 5L15 13l5 2v4a2 2 0 01-2 2A16 16 0 013 6a2 2 0 012-2"/></svg></span><div><small>Phone</small><b><a href="tel:+14034791168">+1 (403) 479-1168</a></b></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14"/><path d="M3 6l9 7 9-7"/></svg></span><div><small>Email</small><b><a href="mailto:info@dustfighters.ca">info@dustfighters.ca</a></b></div></li>
+        <li><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.2 7-12a7 7 0 10-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>Address</small><b>32 Martindale Close NE,<br>Calgary, AB T3J 2V1</b></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="ft-grid">
+      <div>
+        <img src="images/dust-fighter-logo.png" alt="Dust Fighter Cleaning Services">
+        <p>Eco-friendly cleaning for homes and businesses in Calgary, focused on quality, safety and customer satisfaction.</p>
+        <div class="social">
+          <a href="https://www.facebook.com/dustfightercleaning/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 00-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+          <a href="https://www.instagram.com/dustfightercleaning/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Useful links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="https://dustfighters.ca/about-us/">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="https://dustfighters.ca/contact-us/">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Residential Cleaning</a></li>
+          <li><a href="#services">Office &amp; Commercial Cleaning</a></li>
+          <li><a href="#services">Floor Maintenance</a></li>
+          <li><a href="#services">Window Cleaning</a></li>
+          <li><a href="#services">Carpet &amp; Upholstery Cleaning</a></li>
+          <li><a href="#services">Furnace &amp; Dryer Vent Cleaning</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+14034791168">+1 (403) 479-1168</a></li>
+          <li><a href="mailto:info@dustfighters.ca">info@dustfighters.ca</a></li>
+          <li>32 Martindale Close NE,<br>Calgary, AB T3J 2V1, Canada</li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <span>&copy; <span id="yr">2026</span> Dust Fighter Cleaning Services. All rights reserved.</span>
+      <span><a href="https://cleanningdigital.com/" target="_blank" rel="noopener">Design by Cleaning Digital.</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+
+/* services hover preview */
+(function(){
+  const list=document.getElementById('svcList'), prev=document.getElementById('svcPreview'), cap=document.getElementById('svcCap');
+  const cache={};
+  prev.querySelectorAll('img').forEach(i=>cache[i.getAttribute('src')]=i);
+  function show(li){
+    list.querySelectorAll('li').forEach(x=>x.classList.remove('active'));
+    li.classList.add('active');
+    cap.textContent=li.querySelector('.t').firstChild.textContent.trim();
+    const src=li.dataset.img;
+    let img=cache[src];
+    if(!img){img=new Image();img.src=src;img.alt='';img.onerror=()=>img.remove();prev.insertBefore(img,cap);cache[src]=img;}
+    prev.querySelectorAll('img').forEach(i=>i.classList.remove('show'));
+    requestAnimationFrame(()=>img.classList.add('show'));
+  }
+  list.querySelectorAll('li').forEach(li=>{li.addEventListener('mouseenter',()=>show(li));li.addEventListener('focusin',()=>show(li));});
+})();
+
+/* before / after */
+(function(){
+  const ba=document.getElementById('ba'), after=document.getElementById('baAfter'), h=document.getElementById('baHandle');
+  let drag=false;
+  function set(x){const r=ba.getBoundingClientRect();let p=Math.min(Math.max((x-r.left)/r.width,0),1)*100;after.style.clipPath='inset(0 0 0 '+p+'%)';h.style.left=p+'%';}
+  ba.addEventListener('pointerdown',e=>{drag=true;ba.setPointerCapture(e.pointerId);set(e.clientX)});
+  ba.addEventListener('pointermove',e=>{if(drag)set(e.clientX)});
+  ba.addEventListener('pointerup',()=>drag=false);
+})();
+
+/* quote form opens an email to the business */
+document.getElementById('quoteForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const s=document.getElementById('q-svc').value,n=document.getElementById('q-name').value,p=document.getElementById('q-phone').value;
+  const body='Service: '+s+'\nName: '+n+'\nPhone: '+p;
+  window.location.href='mailto:info@dustfighters.ca?subject='+encodeURIComponent('Quote request: '+s)+'&body='+encodeURIComponent(body);
+});
+
+/* reveal on scroll */
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv-in').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
